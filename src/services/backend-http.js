@@ -1,11 +1,10 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 
-@inject(HttpClient)
 export class WebAPI {
 
   constructor(http){
-    this.http = http;
+    this.http = new HttpClient();
 
     this.http
       .configure(x => {
