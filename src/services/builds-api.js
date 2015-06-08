@@ -4,6 +4,8 @@ export class BuildsApi extends WebAPI {
 
   get() {
     this.isRequesting = true;
-    return this.http.get('api/github_repos');
+    return this
+      .http
+      .get('api/github_repos');
   }
 }

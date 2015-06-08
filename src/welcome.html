@@ -2,7 +2,13 @@
   <section class="au-animate">
     <h2>${heading}</h2>
 
+
+
     Here are the builds:
+
+    <div show.bind="!builds">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
 
     <ul repeat.for="build of builds">
       <li>${build.label}</li>
