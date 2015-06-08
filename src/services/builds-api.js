@@ -1,6 +1,6 @@
 import {WebAPI} from './backend-http';
 
-export class ReposApi extends WebAPI {
+export class BuildsApi extends WebAPI {
 
   get() {
     this.isRequesting = true;

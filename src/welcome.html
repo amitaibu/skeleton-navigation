@@ -2,10 +2,11 @@
   <section class="au-animate">
     <h2>${heading}</h2>
 
-    Here are the repos:
-    <div>
-      ${repos}
-    </div>
+    Here are the builds:
+
+    <ul repeat.for="build of builds">
+      <li>${build.label}</li>
+    </ul>
 
 
   </section>

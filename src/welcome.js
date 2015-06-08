@@ -1,22 +1,20 @@
 import {computedFrom} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
-import {ReposApi} from './services/repos-api';
+import {BuildsApi} from './services/builds-api';
 
-@inject(ReposApi)
+@inject(BuildsApi)
 export class Welcome{
 
-  repos = null;
+  builds = null;
 
-  constructor(reposApi){
-    this.reposApi = reposApi;
-    this.repos = this.reposApi.get();
+  constructor(buildsApi){
+    this.buildsApi = buildsApi;
+    this.buildsApi
+      .get()
+      .then(data => {
+        this.builds = JSON.parse(data.response).data;
+      });
   }
 
   heading = 'Welcome to the Aurelia Navigation App!';
-}
-
-export class UpperValueConverter {
-  toView(value){
-    return value && value.toUpperCase();
-  }
 }
