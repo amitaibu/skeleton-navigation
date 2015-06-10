@@ -45,12 +45,6 @@ section {
     max-width: 425px;
 }
 
-/* animate page transitions */
-section.au-enter-active {
-  -webkit-animation: fadeInRight 1s;
-  animation: fadeInRight 1s;
-}
-
 /* animate flickr image entry */
 div.au-stagger {
   /* 50ms will be applied between each successive enter operation */
